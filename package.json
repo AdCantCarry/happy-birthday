@@ -1,0 +1,22 @@
+{
+  "name": "happy-birthday",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.5.1",
+    "postcss": "^8.5.15",
+    "tailwindcss": "^4.3.1",
+    "vite": "^8.1.0"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.1",
+    "canvas-confetti": "^1.9.4",
+    "swiper": "^12.2.0"
+  }
+}

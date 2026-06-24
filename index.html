@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday Chị Danh! 🌸</title>
+    
+    <!-- THẦN CHÚ BIẾN EMOJI HOA ANH ĐÀO THÀNH LOGO TAB TRÌNH DUYỆT -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
+    
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+    <style>
+      body, html {
+        margin: 0; padding: 0; width: 100%; height: 100%;
+        overflow: hidden; background-color: #fdf2f8; 
+        font-family: system-ui, -apple-system, sans-serif;
+        color: #1e293b;
+      }
+      .swiper { width: 100vw; height: 100vh; }
+      .swiper-slide { 
+        width: 100vw; height: 100vh; 
+        display: flex; flex-direction: column; justify-content: center; align-items: center;
+        position: relative; box-sizing: border-box;
+      }
+
+      .pastel-card {
+        background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(16px);
+        border: 1px solid rgba(244, 114, 182, 0.3); border-radius: 28px;
+        box-shadow: 0 20px 40px -15px rgba(244, 114, 182, 0.2);
+        transition: all 0.3s ease;
+      }
+      .pastel-card:hover { transform: translateY(-3px); }
+
+      /* Hiệu ứng Note ghim giấy */
+      .note-card {
+        background: #ffffff; border-radius: 18px; padding: 20px;
+        box-shadow: 0 10px 25px -5px rgba(251, 113, 133, 0.12);
+        border-top: 4px solid #fb7185; transition: all 0.2s ease;
+      }
+      .note-card:hover { transform: scale(1.02) rotate(0deg) !important; z-index: 20; box-shadow: 0 20px 40px -10px rgba(251, 113, 133, 0.3); }
+
+      /* Thanh cuộn mềm mại cho Slide 3 */
+      .custom-scroll { scrollbar-width: thin; scrollbar-color: #f472b6 transparent; }
+      .custom-scroll::-webkit-scrollbar { width: 6px; }
+      .custom-scroll::-webkit-scrollbar-thumb { background-color: #f472b6; border-radius: 10px; }
+
+      /* KHUNG VOUCHER VIP HOÀNG GIA */
+      .vip-gold-box {
+        background: linear-gradient(135deg, #0f172a 0%, #020617 100%);
+        border: 3px solid #f59e0b;
+        box-shadow: 0 0 50px rgba(245, 158, 11, 0.35), inset 0 0 20px rgba(245, 158, 11, 0.15);
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- DÀN LOA -->
+    <audio id="bgMusic" loop src="./wwwroot/audio/happy-birthday.mp3"></audio>
+    <audio id="partyMusic" src="./wwwroot/audio/benz.mp3"></audio>
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+
+        <!-- ================= SLIDE 1: LỜI CHÀO ================= -->
+        <div class="swiper-slide bg-gradient-to-b from-rose-50 via-pink-100/60 to-rose-50 px-6 text-center">
+          <div class="max-w-2xl mx-auto flex flex-col items-center z-10">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-200/70 border border-rose-300 text-rose-700 mb-8 shadow-sm">
+              <span class="text-xs font-bold tracking-wider uppercase">🌸28.06.2026🌸</span>
+            </div>
+            <h1 class="text-4xl md:text-6xl font-black tracking-tight mb-6 text-slate-800 leading-tight">
+              HAPPY BIRTHDAY <br>
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 via-pink-500 to-amber-500">
+                CHỊ NGUYỄN THANH DANH! 🌸
+              </span>
+            </h1>
+            <p class="text-slate-600 text-base md:text-lg font-medium max-w-md leading-relaxed mb-12">
+              a
+            </p>
+            <div class="flex flex-col items-center opacity-60 animate-bounce text-rose-500">
+              <span class="text-[11px] uppercase font-bold tracking-[0.2em] mb-2">Vuốt lên để xem thêm</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7-7-7 7"></path></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= SLIDE 2: BENTO GRID ================= -->
+        <div class="swiper-slide bg-gradient-to-b from-rose-50 to-pink-50 px-4 md:px-6">
+          <div class="max-w-4xl w-full mx-auto">
+            <div class="mb-6 text-center md:text-left">
+              <span class="text-xs font-bold tracking-widest text-rose-500 uppercase">Hồ sơ năng lực</span>
+              <h2 class="text-2xl md:text-3xl font-black text-slate-800">SỰ RẠNG RỠ CỦA "THUYỀN TRƯỞNG"</h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+
+              <div class="pastel-card col-span-2 row-span-2 p-0 relative overflow-hidden group min-h-[260px] md:min-h-[340px] border-2 border-white">
+                <img id="bentoBossImg" src="./wwwroot/images/chi_Danh.png" alt="Chị Danh" class="w-full h-full object-cover object-top group-hover:scale-105 transition-all duration-500" />
+                <div class="absolute bottom-3 left-3 right-3 bg-white/90 backdrop-blur-md p-3 rounded-2xl shadow-lg border border-pink-100">
+                  <div class="flex items-center gap-1.5 mb-0.5">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span class="text-[10px] font-bold text-rose-500 uppercase tracking-wider">Giao diện làm việc</span>
+                  </div>
+                  <p class="text-sm md:text-base font-extrabold text-slate-800">aa</p>
+                </div>
+              </div>
+              <div class="pastel-card col-span-2 md:col-span-2 p-5 flex flex-col justify-between bg-white/80">
+                <span class="text-xs font-bold text-rose-400 uppercase tracking-wider">Chỉ số năng lượng</span>
+                <div class="my-2">
+                  <span class="text-4xl md:text-5xl font-black text-rose-500">100%</span>
+                  <span class="text-lg font-bold text-slate-700 ml-1">Tích cực</span>
+                </div>
+                <p class="text-xs text-slate-500">aa</p>
+              </div>
+              <div class="pastel-card col-span-1 p-4 flex flex-col justify-between bg-gradient-to-br from-pink-100/50 to-white">
+                <span class="text-[11px] font-bold text-pink-600 uppercase">Tuyệt kỹ</span>
+                <p class="text-sm font-extrabold text-slate-800 my-2">aa</p>
+                <span class="text-[10px] text-slate-400">aa</span>
+              </div>
+              <div class="pastel-card col-span-1 p-4 flex flex-col justify-between bg-gradient-to-br from-amber-100/50 to-white">
+                <span class="text-[11px] font-bold text-amber-600 uppercase">Vai trò phụ</span>
+                <p class="text-sm font-extrabold text-slate-800 my-2">aa</p>
+                <span class="text-[10px] text-slate-400">aa</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= SLIDE 3: BỨC TƯỜNG 9 THÀNH VIÊN ================= -->
+        <div class="swiper-slide bg-gradient-to-b from-pink-50 via-rose-100/40 to-pink-100 px-4 md:px-6">
+          <div class="max-w-5xl w-full mx-auto h-[85vh] flex flex-col">
+            <div class="mb-4 text-center shrink-0">
+              <span class="text-xs font-bold tracking-widest text-rose-500 uppercase">Wall of Love</span>
+              <h2 class="text-2xl md:text-3xl font-black text-slate-800">LỜI NHẮN TỪ "HỆ SINH THÁI" 💌</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 overflow-y-auto grow custom-scroll p-2">
+              <div class="note-card rotate-1" style="border-top-color: #f43f5e;">
+                <span class="text-[11px] font-bold text-rose-600 bg-rose-50 px-2 py-0.5 rounded">Đồng chí A</span>
+                <p class="text-xs text-slate-600 mt-2 font-medium leading-relaxed">"Chúc Thuyền trưởng tuổi mới chốt deal nhanh như cách chị gỡ bug dự án! Cảm ơn chị vì những lúc deadline căng như dây đàn nhưng vẫn giữ thái độ 'thiền' để anh em không bị hoảng."</p>
+              </div>
+              <div class="note-card -rotate-1" style="border-top-color: #10b981;">
+                <span class="text-[11px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">Đồng chí B</span>
+                <p class="text-xs text-slate-600 mt-2 font-medium leading-relaxed">"aa"</p>
+              </div>
+              <div class="note-card rotate-2" style="border-top-color: #8b5cf6;">
+                <span class="text-[11px] font-bold text-purple-600 bg-purple-50 px-2 py-0.5 rounded">Đồng chí C</span>
+                <p class="text-xs text-slate-600 mt-2 font-medium leading-relaxed">"aa"</p>
+              </div>
+              <div class="note-card -rotate-2" style="border-top-color: #f59e0b;">
+                <span class="text-[11px] font-bold text-amber-600 bg-amber-50 px-2 py-0.5 rounded">Đồng chí D</span>
+                <p class="text-xs text-slate-600 mt-2 font-medium leading-relaxed">"aa"</p>
+              </div>
+              <div class="note-card rotate-1" style="border-top-color: #06b6d4;">
+                <span class="text-[11px] font-bold text-cyan-600 bg-cyan-50 px-2 py-0.5 rounded">Đồng chí E </span>
+                <p class="text-xs text-slate-600 mt-2 font-medium leading-relaxed">"aa"</p>
+              </div>
+              <div class="note-card -rotate-1" style="border-top-color: #ec4899;">
+                <span class="text-[11px] font-bold text-pink-600 bg-pink-50 px-2 py-0.5 rounded">Đồng chí F</span>
+                <p class="text-xs text-slate-600 mt-2 font-medium leading-relaxed">"aa"</p>
+              </div>
+              <div class="note-card rotate-2" style="border-top-color: #3b82f6;">
+                <span class="text-[11px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded">Đồng chí G</span>
+                <p class="text-xs text-slate-600 mt-2 font-medium leading-relaxed">"aa"</p>
+              </div>
+              <div class="note-card -rotate-1" style="border-top-color: #eab308;">
+                <span class="text-[11px] font-bold text-yellow-600 bg-yellow-50 px-2 py-0.5 rounded">Đồng chí H</span>
+                <p class="text-xs text-slate-600 mt-2 font-medium leading-relaxed">"aa"</p>
+              </div>
+              <div class="note-card -rotate-1" style="border-top-color: #7b21b7;">
+                <span class="text-[11px] font-bold text-purple-600 bg-yellow-50 px-2 py-0.5 rounded">Đồng chí I</span>
+                <p class="text-xs text-slate-600 mt-2 font-medium leading-relaxed">"aa"</p>
+              </div>
+              <div class="note-card rotate-1 bg-gradient-to-br from-rose-50 to-pink-100" style="border-top-color: #f43f5e;">
+                <span class="text-[11px] font-black text-rose-700 uppercase tracking-wider">✦ TỪ TẬP THỂ PHÒNG ✦</span>
+                <p class="text-xs font-bold text-slate-800 mt-2 leading-relaxed">"aa"</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- ================= SLIDE 4: KHUNG VIP VƯƠNG MIỆN & 10 LON BIA HỘ GIÁ ================= -->
+        <div class="swiper-slide bg-gradient-to-b from-pink-100 via-rose-200 to-pink-200 px-6 text-center relative overflow-hidden flex flex-col justify-center items-center">
+          
+          <div class="max-w-md w-full mx-auto relative z-10 -mt-10">
+            
+            <!-- TRƯỚC KHI BẤM: Nút bấm VÀNG SÂM-PANH -->
+            <div id="gift-intro" class="transition-all duration-500">
+              <span class="text-xs font-bold text-rose-600 tracking-widest uppercase mb-2 block">Giao thức tối thượng</span>
+              <h2 class="text-3xl font-black text-slate-800 mb-8">MÓN QUÀ TỪ TẬP THỂ</h2>
+              
+              <button id="openGiftBtn" class="w-full py-6 bg-gradient-to-r from-amber-500 via-yellow-300 to-amber-500 text-slate-950 font-black text-xl rounded-2xl shadow-2xl shadow-amber-500/40 hover:scale-102 active:scale-98 transition-all cursor-pointer flex items-center justify-center gap-3 border-2 border-yellow-100">
+                <span class="tracking-wider">VOUCHER VIP</span>
+                <span class="text-3xl animate-bounce">👑</span>
+              </button>
+            </div>
+
+            <!-- SAU KHI BẤM: Khung VIP Đen - Vàng có Vương Miện -->
+            <div id="gift-voucher" class="hidden vip-gold-box rounded-3xl p-6 text-left relative overflow-hidden animate-fade-in text-amber-100">
+              <div class="absolute -right-12 -bottom-12 w-32 h-32 bg-amber-500/20 rounded-full blur-xl pointer-events-none"></div>
+              
+              <div class="relative z-10">
+                <div class="flex justify-between items-start mb-4">
+                  <div>
+                    <span class="text-[10px] font-black bg-gradient-to-r from-amber-400 to-yellow-200 text-slate-950 px-3 py-1 rounded-full uppercase tracking-widest">
+                      Royal Pass // VIP
+                    </span>
+                    <h3 class="text-xl font-black text-amber-300 mt-2 tracking-wide">VOUCHER "HỌP KÍN" CÓ CỒN 🥂</h3>
+                  </div>
+                  <span class="text-4xl animate-pulse">👑</span>
+                </div>
+
+                <div class="bg-amber-500/10 p-4 rounded-2xl border border-amber-500/30 my-4 backdrop-blur-md">
+                  <p class="text-sm font-bold text-amber-100 text-center leading-relaxed">
+                    "Được quyền triệu tập khẩn cấp toàn bộ 9 thành viên tham gia một buổi 'Hội nghị' bằng Heineken Silver ướp lạnh!"
+                  </p>
+                </div>
+
+                <div class="text-[11px] text-slate-400 space-y-1 font-mono border-t border-amber-500/20 pt-3">
+                  <p>● Quy định: <span class="text-amber-300 font-bold">aa</span></p>
+                  <p>● Lực lượng: <span class="text-emerald-400 font-bold">10 lon Silver đã dàn trận ở dưới</span></p>
+                  <p>● Deadline: <span class="text-pink-400 font-bold">28/06/2026</span></p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- ĐỘI DANH DỰ: 10 LON BIA HEINEKEN SILVER XẾP KẾ BÊN NHAU Ở ĐÁY -->
+          <div id="beerLineupContainer" class="absolute bottom-0 left-0 right-0 w-full flex justify-center items-end gap-1 md:gap-2.5 px-2 pb-1 md:pb-3 pointer-events-none z-30 transition-all duration-1000 translate-y-full opacity-0">
+             <!-- Javascript sẽ tự động đẻ 10 lon bia vào đây -->
+          </div>
+
+        </div>
+
+      </div>
+      <div class="absolute right-4 top-1/2 -translate-y-1/2 z-50">
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+    <script>
+      const bgAudio = document.getElementById('bgMusic');
+      const partyAudio = document.getElementById('partyMusic');
+
+      // Tự sửa sai nếu ảnh sếp là .jpg thay vì .png
+      const bImg = document.getElementById('bentoBossImg');
+      bImg.onerror = function() { if(this.src.includes('.png')) this.src = './wwwroot/images/chi_Danh.jpg'; };
+
+      // 1. Khởi tạo Swiper
+      const swiper = new Swiper('.mySwiper', {
+        direction: 'vertical', slidesPerView: 1, spaceBetween: 0,
+        mousewheel: true, speed: 700,
+        pagination: { el: '.swiper-pagination', clickable: true },
+        on: {
+          slideChange: function () {
+            if (this.activeIndex === 3 && !document.getElementById('gift-voucher').classList.contains('hidden')) {
+              bgAudio.pause(); partyAudio.play().catch(()=>{});
+            } else {
+              partyAudio.pause(); partyAudio.currentTime = 0; bgAudio.play().catch(()=>{});
+            }
+          }
+        }
+      });
+
+      // BẪY AUTOPLAY TÀNG HÌNH: Chỉ cần chuột nhích 1mm hoặc chạm tay vào màn hình -> PHÁT NHẠC NGAY!
+      const forceAutoplay = () => {
+        if (swiper.activeIndex !== 3 && bgAudio.paused) bgAudio.play().catch(()=>{});
+      };
+      ['mousemove', 'pointerdown', 'touchstart', 'keydown', 'wheel'].forEach(event => {
+        window.addEventListener(event, forceAutoplay, { once: true });
+      });
+
+      // 2. KÍCH HOẠCH BÓC QUÀ HOÀNG GIA
+      const openBtn = document.getElementById('openGiftBtn');
+      openBtn.addEventListener('click', () => {
+        document.getElementById('gift-intro').style.display = 'none';
+        document.getElementById('gift-voucher').classList.remove('hidden');
+
+        bgAudio.pause(); partyAudio.play().catch(()=>{});
+
+        confetti({
+          particleCount: 100, spread: 70, origin: { y: 0.6 },
+          colors: ['#f59e0b', '#facc15', '#10b981', '#ffffff', '#f472b6']
+        });
+
+        // Kéo rèm cho 10 lon bia Heineken Silver trượt lên
+        showTenSilverBeers();
+      });
+
+      // HÀM DỰNG 10 LON BIA SILVER NẰM KẾ BÊN NHAU
+      function showTenSilverBeers() {
+        const lineup = document.getElementById('beerLineupContainer');
+        lineup.innerHTML = ''; // Xóa rỗng trước khi tạo
+
+        for(let i = 0; i < 10; i++) {
+          const can = document.createElement('img');
+          can.src = './wwwroot/images/bia.png';
+          can.onerror = () => { console.log("Thiếu ảnh bia.png"); can.remove(); };
+
+          // Style từng lon: Có bóng đổ, hiệu ứng hover nhô lên như phím đàn
+          can.className = 'w-8 sm:w-12 md:w-16 h-auto drop-shadow-[0_10px_10px_rgba(0,0,0,0.4)] hover:-translate-y-3 md:hover:-translate-y-5 transition-all duration-300 pointer-events-auto cursor-pointer';
+          
+          // Cho 10 lon trượt lên so le nhau cực kỳ nghệ thuật
+          can.style.transition = 'transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+          can.style.transform = 'translateY(100px)';
+          
+          lineup.appendChild(can);
+
+          // Kích hoạt trượt lên từng lon một
+          setTimeout(() => { can.style.transform = 'translateY(0)'; }, i * 60);
+        }
+
+        // Hiện nguyên cụm lineup
+        lineup.classList.remove('translate-y-full', 'opacity-0');
+        lineup.classList.add('translate-y-0', 'opacity-100');
+      }
+    </script>
+  </body>
+</html>
