@@ -20,9 +20,9 @@
         font-family: system-ui, -apple-system, sans-serif;
         color: #1e293b;
       }
-      .swiper { width: 100vw; height: 100vh; }
+      .swiper { width: 100vw; height: 100dvh; }
       .swiper-slide { 
-        width: 100vw; height: 100vh; 
+        width: 100vw; height: 100dvh; 
         display: flex; flex-direction: column; justify-content: center; align-items: center;
         position: relative; box-sizing: border-box;
       }
@@ -130,12 +130,12 @@
 
         <!-- ================= SLIDE 3: BỨC TƯỜNG 9 THÀNH VIÊN ================= -->
         <div class="swiper-slide bg-gradient-to-b from-pink-50 via-rose-100/40 to-pink-100 px-4 md:px-6">
-          <div class="max-w-5xl w-full mx-auto h-[85vh] flex flex-col">
+          <div class="max-w-5xl w-full mx-auto h-[85dvh] flex flex-col">
             <div class="mb-4 text-center shrink-0">
               <span class="text-xs font-bold tracking-widest text-rose-500 uppercase">Wall of Love</span>
               <h2 class="text-2xl md:text-3xl font-black text-slate-800">LỜI NHẮN TỪ "HỆ SINH THÁI" 💌</h2>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 overflow-y-auto grow custom-scroll p-2">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 overflow-y-auto grow min-h-0 custom-scroll p-2 swiper-no-swiping pb-8">
               <div class="note-card rotate-1" style="border-top-color: #f43f5e;">
                 <span class="text-[11px] font-bold text-rose-600 bg-rose-50 px-2 py-0.5 rounded">Đồng chí A</span>
                 <p class="text-xs text-slate-600 mt-2 font-medium leading-relaxed">"aa"</p>
@@ -228,9 +228,9 @@
 
           </div>
 
-          <!-- ĐỘI DANH DỰ: 10 LON BIA HEINEKEN SILVER XẾP KẾ BÊN NHAU Ở ĐÁY -->
+
           <div id="beerLineupContainer" class="absolute bottom-0 left-0 right-0 w-full flex justify-center items-end gap-1 md:gap-2.5 px-2 pb-1 md:pb-3 pointer-events-none z-30 transition-all duration-1000 translate-y-full opacity-0">
-             <!-- Javascript sẽ tự động đẻ 10 lon bia vào đây -->
+
           </div>
 
         </div>
@@ -265,7 +265,7 @@
         }
       });
 
-      // BẪY AUTOPLAY TÀNG HÌNH: Chỉ cần chuột nhích 1mm hoặc chạm tay vào màn hình -> PHÁT NHẠC NGAY!
+
       const forceAutoplay = () => {
         if (swiper.activeIndex !== 3 && bgAudio.paused) bgAudio.play().catch(()=>{});
       };
@@ -286,34 +286,29 @@
           colors: ['#f59e0b', '#facc15', '#10b981', '#ffffff', '#f472b6']
         });
 
-        // Kéo rèm cho 10 lon bia Heineken Silver trượt lên
         showTenSilverBeers();
       });
 
       // HÀM DỰNG 10 LON BIA SILVER NẰM KẾ BÊN NHAU
       function showTenSilverBeers() {
         const lineup = document.getElementById('beerLineupContainer');
-        lineup.innerHTML = ''; // Xóa rỗng trước khi tạo
+        lineup.innerHTML = ''; 
 
         for(let i = 0; i < 10; i++) {
           const can = document.createElement('img');
           can.src = './wwwroot/images/bia.png';
           can.onerror = () => { console.log("Thiếu ảnh bia.png"); can.remove(); };
 
-          // Style từng lon: Có bóng đổ, hiệu ứng hover nhô lên như phím đàn
           can.className = 'w-8 sm:w-12 md:w-16 h-auto drop-shadow-[0_10px_10px_rgba(0,0,0,0.4)] hover:-translate-y-3 md:hover:-translate-y-5 transition-all duration-300 pointer-events-auto cursor-pointer';
           
-          // Cho 10 lon trượt lên so le nhau cực kỳ nghệ thuật
           can.style.transition = 'transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
           can.style.transform = 'translateY(100px)';
           
           lineup.appendChild(can);
 
-          // Kích hoạt trượt lên từng lon một
           setTimeout(() => { can.style.transform = 'translateY(0)'; }, i * 60);
         }
 
-        // Hiện nguyên cụm lineup
         lineup.classList.remove('translate-y-full', 'opacity-0');
         lineup.classList.add('translate-y-0', 'opacity-100');
       }
