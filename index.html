@@ -86,7 +86,7 @@
     <div id="petals-container"></div>
 
     <!-- DÀN LOA -->
-    <audio id="bgMusic" loop src="./wwwroot/audio/happy-birthday.mp3"></audio>
+    <audio id="bgMusic" loop src="./wwwroot/audio/happy-birthday.mp3" autoplay></audio>
     <audio id="partyMusic" src="./wwwroot/audio/benz.mp3"></audio>
 
     <div class="swiper mySwiper">
@@ -104,9 +104,7 @@
                 SẾP NGUYỄN THANH DANH! 🌸
               </span>
             </h1>
-            <p class="text-slate-600 text-base md:text-lg font-medium max-w-md leading-relaxed mb-12">
-              a
-            </p>
+
             <div class="flex flex-col items-center opacity-60 animate-bounce text-rose-500">
               <span class="text-[11px] uppercase font-bold tracking-[0.2em] mb-2">Vuốt lên để xem thêm</span>
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7-7-7 7"></path></svg>
@@ -130,32 +128,60 @@
                     <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                     <span class="text-[10px] font-bold text-rose-500 uppercase tracking-wider">Giao diện làm việc</span>
                   </div>
-                  <p class="text-sm md:text-base font-extrabold text-slate-800">aa</p>
+                  <p class="text-sm md:text-base font-extrabold text-slate-800">Luôn vui vẻ</p>
                 </div>
               </div>
+              <!-- Chỉ số năng lượng -->
               <div class="pastel-card col-span-2 md:col-span-2 p-5 flex flex-col justify-between bg-white/80">
                 <span class="text-xs font-bold text-rose-400 uppercase tracking-wider">Chỉ số năng lượng</span>
                 <div class="my-2">
                   <span class="text-4xl md:text-5xl font-black text-rose-500">100%</span>
                   <span class="text-lg font-bold text-slate-700 ml-1">Tích cực</span>
                 </div>
-                <p class="text-xs text-slate-500">aa</p>
+                <p class="text-xs text-slate-500">Lan tỏa năng lượng đến toàn đội</p>
               </div>
-              <div class="pastel-card col-span-1 p-4 flex flex-col justify-between bg-gradient-to-br from-pink-100/50 to-white">
-                <span class="text-[11px] font-bold text-pink-600 uppercase">Tuyệt kỹ</span>
-                <p class="text-sm font-extrabold text-slate-800 my-2">aa</p>
-                <span class="text-[10px] text-slate-400">aa</span>
-              </div>
-              <div class="pastel-card col-span-1 p-4 flex flex-col justify-between bg-gradient-to-br from-amber-100/50 to-white">
-                <span class="text-[11px] font-bold text-amber-600 uppercase">Vai trò phụ</span>
-                <p class="text-sm font-extrabold text-slate-800 my-2">aa</p>
-                <span class="text-[10px] text-slate-400">aa</span>
+
+              <!-- Màn hình Pixel Yên bình (Gộp 2 ô) -->
+              <div class="pastel-card col-span-2 md:col-span-2 p-0 overflow-hidden relative flex items-center justify-center min-h-[140px] md:min-h-[160px] border-[6px] border-slate-800 bg-slate-900 rounded-xl group">
+                <!-- Chỗ để người dùng thay ảnh GIF Pixel Art -->
+                <img src="./wwwroot/images/pixel-garden.gif" alt="Pixel Garden" class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'160\'><rect width=\'100%\' height=\'100%\' fill=\'%231e293b\'/><text x=\'50%\' y=\'50%\' font-family=\'monospace\' font-size=\'14\' fill=\'%2334d399\' text-anchor=\'middle\' dominant-baseline=\'middle\'>[Chèn GIF Pixel Cảnh Yên Bình Vào Đây]</text></svg>'"/>
+                
+                <!-- Hiệu ứng sọc ngang (Scanline CRT) để làm mượt ảnh pixel -->
+                <div class="absolute inset-0 z-10 pointer-events-none opacity-20" style="background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%); background-size: 100% 4px;"></div>
+                
+                <!-- Viền tối bo góc màn hình cũ (Vignette) -->
+                <div class="absolute inset-0 z-20 pointer-events-none shadow-[inset_0_0_20px_rgba(0,0,0,0.8)]"></div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- ================= SLIDE 3: BỨC TƯỜNG 9 THÀNH VIÊN ================= -->
+        <!-- ================= SLIDE 3: ALBUM KỶ NIỆM ================= -->
+        <div class="swiper-slide bg-gradient-to-b from-pink-50 via-rose-50 to-pink-100 flex flex-col justify-center items-center px-4 md:px-6">
+          <div class="swiper photoSwiper w-[92vw] max-w-[800px] aspect-[4/3] md:aspect-video rounded-2xl shadow-xl border-[6px] border-white bg-white/80 backdrop-blur-sm">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide flex items-center justify-center p-2">
+                <img src="./wwwroot/images/1.jpg" class="max-w-full max-h-full object-contain rounded-md shadow-sm" onerror="this.src='https://placehold.co/400x500/ffb7c5/ffffff?text=Anh+1'"/>
+              </div>
+              <div class="swiper-slide flex items-center justify-center p-2">
+                <img src="./wwwroot/images/2.jpg" class="max-w-full max-h-full object-contain rounded-md shadow-sm" onerror="this.src='https://placehold.co/400x500/ffb7c5/ffffff?text=Anh+2'"/>
+              </div>
+              <div class="swiper-slide flex items-center justify-center p-2">
+                <img src="./wwwroot/images/3.jpg" class="max-w-full max-h-full object-contain rounded-md shadow-sm" onerror="this.src='https://placehold.co/400x500/ffb7c5/ffffff?text=Anh+3'"/>
+              </div>
+              <div class="swiper-slide flex items-center justify-center p-2">
+                <img src="./wwwroot/images/4.jpg" class="max-w-full max-h-full object-contain rounded-md shadow-sm" onerror="this.src='https://placehold.co/400x500/ffb7c5/ffffff?text=Anh+4'"/>
+              </div>
+              <div class="swiper-slide flex items-center justify-center p-2">
+                <img src="./wwwroot/images/5.jpg" class="max-w-full max-h-full object-contain rounded-md shadow-sm" onerror="this.src='https://placehold.co/400x500/ffb7c5/ffffff?text=Anh+5'"/>
+              </div>
+            </div>
+            <div class="swiper-pagination absolute bottom-1 w-full text-center z-10 opacity-70"></div>
+          </div>
+          <div class="text-[11px] font-bold text-rose-400 mt-6 animate-pulse tracking-wider uppercase">Vuốt sang ngang để xem ảnh ✨</div>
+        </div>
+
+        <!-- ================= SLIDE 4: BỨC TƯỜNG 9 THÀNH VIÊN ================= -->
         <div class="swiper-slide bg-gradient-to-b from-pink-50 via-rose-100/40 to-pink-100 px-4 md:px-6">
           <div class="max-w-5xl w-full mx-auto h-[85dvh] flex flex-col">
             <div class="mb-4 text-center shrink-0">
@@ -169,7 +195,7 @@
               </div>
               <div class="note-card -rotate-1" style="border-top-color: #10b981;">
                 <span class="text-[11px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">Đồng chí Quang</span>
-                <p class="text-xs text-slate-600 mt-2 font-medium leading-relaxed">"aa"</p>
+                <p class="text-xs text-slate-600 mt-2 font-medium leading-relaxed">"Chúc chị Danh tuổi mới bùng nổ, thành công rực rỡ nhé!"</p>
               </div>
               <div class="note-card rotate-2" style="border-top-color: #8b5cf6;">
                 <span class="text-[11px] font-bold text-purple-600 bg-purple-50 px-2 py-0.5 rounded">Đồng chí Cao</span>
@@ -177,38 +203,35 @@
               </div>
               <div class="note-card -rotate-2" style="border-top-color: #f59e0b;">
                 <span class="text-[11px] font-bold text-amber-600 bg-amber-50 px-2 py-0.5 rounded">Đồng chí Lạc</span>
-                <p class="text-xs text-slate-600 mt-2 font-medium leading-relaxed">"aa"</p>
+                <p class="text-xs text-slate-600 mt-2 font-medium leading-relaxed">"Happy birthday Sếp! Chúc chị mãi tươi trẻ, dồi dào sức khỏe và luôn thành công."</p>
               </div>
               <div class="note-card rotate-1" style="border-top-color: #06b6d4;">
                 <span class="text-[11px] font-bold text-cyan-600 bg-cyan-50 px-2 py-0.5 rounded">Đồng chí Hòa</span>
-                <p class="text-xs text-slate-600 mt-2 font-medium leading-relaxed">"aa"</p>
+                <p class="text-xs text-slate-600 mt-2 font-medium leading-relaxed">"Em chúc Sếp Danh tuổi mới thật nhiều niềm vui, luôn xinh đẹp, hạnh phúc viên mãn và đạt được mọi mục tiêu thành công rực rỡ trên con đường phía trước ạ <span class="text-red-500">❤️</span>"</p>
               </div>
               <div class="note-card -rotate-1" style="border-top-color: #ec4899;">
                 <span class="text-[11px] font-bold text-pink-600 bg-pink-50 px-2 py-0.5 rounded">Đồng chí Toàn</span>
-                <p class="text-xs text-slate-600 mt-2 font-medium leading-relaxed">"aa"</p>
+                <p class="text-xs text-slate-600 mt-2 font-medium leading-relaxed">"Chúc chị sinh nhật vui vẻ, tiền vào như nước, thăng tiến không ngừng!"</p>
               </div>
               <div class="note-card rotate-2" style="border-top-color: #3b82f6;">
                 <span class="text-[11px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded">Đồng chí Thảo</span>
-                <p class="text-xs text-slate-600 mt-2 font-medium leading-relaxed">"aa"</p>
+                <p class="text-xs text-slate-600 mt-2 font-medium leading-relaxed">"Chúc Sếp tuổi mới luôn xinh đẹp, rạng rỡ và tràn đầy năng lượng tích cực!"</p>
               </div>
               <div class="note-card -rotate-1" style="border-top-color: #eab308;">
                 <span class="text-[11px] font-bold text-yellow-600 bg-yellow-50 px-2 py-0.5 rounded">Đồng chí Siêng</span>
-                <p class="text-xs text-slate-600 mt-2 font-medium leading-relaxed">"aa"</p>
+                <p class="text-xs text-slate-600 mt-2 font-medium leading-relaxed">"Chúc mừng sinh nhật Sếp. Chúc chị một năm thật nhiều may mắn và bứt phá!"</p>
               </div>
               <div class="note-card -rotate-1" style="border-top-color: #7b21b7;">
                 <span class="text-[11px] font-bold text-purple-600 bg-yellow-50 px-2 py-0.5 rounded">Đồng chí Duy</span>
                 <p class="text-xs text-slate-600 mt-2 font-medium leading-relaxed">"Chúc mừng sinh nhật chị Danh, mong mọi điều tốt đẹp, may mắn và rực rỡ nhất sẽ đến với chị trong năm tuổi mới này"</p>
               </div>
-              <div class="note-card rotate-1 bg-gradient-to-br from-rose-50 to-pink-100 md:col-span-3" style="border-top-color: #f43f5e;">
-                <span class="text-[11px] font-black text-rose-700 uppercase tracking-wider">✦ TỪ TẬP THỂ ✦</span>
-                <p class="text-xs font-bold text-slate-800 mt-2 leading-relaxed">"Kính chúc Sếp một ngày sinh nhật rực rỡ nhất! Mong Sếp tuổi mới sẽ gặt hái thêm nhiều thành công rực rỡ, luôn vui vẻ, vững tay chèo lái con tàu của chúng ta đi từ dự án này đến dự án khác. We love you"</p>
-              </div>
+
             </div>
           </div>
         </div>
 
 
-        <!-- ================= SLIDE 4: KHUNG VIP VƯƠNG MIỆN & 10 LON BIA HỘ GIÁ ================= -->
+        <!-- ================= SLIDE 5: KHUNG VIP VƯƠNG MIỆN & 10 LON BIA HỘ GIÁ ================= -->
         <div class="swiper-slide bg-gradient-to-b from-pink-100 via-rose-200 to-pink-200 px-6 text-center relative overflow-hidden flex flex-col justify-center items-center">
           
           <div class="max-w-md w-full mx-auto relative z-10 -mt-10">
@@ -246,7 +269,6 @@
                 </div>
 
                 <div class="text-[11px] text-slate-400 space-y-1 font-mono border-t border-amber-500/20 pt-3">
-                  <p>● Quy định: <span class="text-amber-300 font-bold">aa</span></p>
                   <p>● Lực lượng: <span class="text-emerald-400 font-bold">10 lon Silver đã dàn trận ở dưới</span></p>
                   <p>● Deadline: <span class="text-pink-400 font-bold">28/06/2026</span></p>
                 </div>
@@ -283,7 +305,7 @@
         pagination: { el: '.swiper-pagination', clickable: true },
         on: {
           slideChange: function () {
-            if (this.activeIndex === 3 && !document.getElementById('gift-voucher').classList.contains('hidden')) {
+            if (this.activeIndex === 4 && !document.getElementById('gift-voucher').classList.contains('hidden')) {
               bgAudio.pause(); partyAudio.play().catch(()=>{});
             } else {
               partyAudio.pause(); partyAudio.currentTime = 0; bgAudio.play().catch(()=>{});
@@ -294,8 +316,16 @@
 
 
       const forceAutoplay = () => {
-        if (swiper.activeIndex !== 3 && bgAudio.paused) bgAudio.play().catch(()=>{});
+        if (swiper.activeIndex !== 4 && bgAudio.paused) bgAudio.play().catch(()=>{});
       };
+
+      const photoSwiper = new Swiper('.photoSwiper', {
+        direction: 'horizontal',
+        effect: 'cards',
+        grabCursor: true,
+        autoplay: { delay: 2500, disableOnInteraction: false },
+        pagination: { el: '.photoSwiper .swiper-pagination', clickable: true }
+      });
       ['mousemove', 'pointerdown', 'touchstart', 'keydown', 'wheel'].forEach(event => {
         window.addEventListener(event, forceAutoplay, { once: true });
       });
@@ -381,6 +411,12 @@
 
       // Tạo hoa liên tục mỗi 400ms
       setInterval(createPetal, 400);
+
+      // Tự động phát nhạc khi người dùng tương tác với trang (bất kỳ đâu)
+      document.body.addEventListener('click', function initAudio() {
+        bgAudio.play().catch(()=>{});
+        document.body.removeEventListener('click', initAudio);
+      }, { once: true });
     </script>
   </body>
 </html>
